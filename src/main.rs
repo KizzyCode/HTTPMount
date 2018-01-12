@@ -30,6 +30,15 @@ impl CLI {
 		// Set own-path
 		cli.http_mount = args[0].clone();
 		
+		// Parse licenses and help
+		cli.licenses = CLI::parse_key_value("--licenses", &args, &|value: Option<&str>| value.is_some());
+		cli.help = CLI::parse_key_value("--help", &args, &|value: Option<&str>| value.is_some());
+		if cli.licenses || cli.help { return cli }
+		
+		
+		// Parse no-fork
+		cli.no_fork = CLI::parse_key_value("--no-fork", &args, &|value: Option<&str>| value.is_some());
+		
 		// Parse URI
 		cli.uri = CLI::parse_key_value("--uri=", &args, &|value: Option<&str>| {
 			if let Some(uri) = value { uri.to_owned() }
@@ -59,15 +68,6 @@ impl CLI {
 			if let Ok(timeout) = timeout.parse::<u64>() { cli.timeout = timeout }
 				else { help(&format!("Error: Invalid timeout \"{}\"", timeout)) }
 		};
-		
-		// Parse no-fork
-		cli.no_fork = CLI::parse_key_value("--no-fork", &args, &|value: Option<&str>| value.is_some());
-		
-		// Parse copyright
-		cli.licenses = CLI::parse_key_value("--licenses", &args, &|value: Option<&str>| value.is_some());
-		
-		// Parse help
-		cli.help = CLI::parse_key_value("--help", &args, &|value: Option<&str>| value.is_some());
 		
 		cli
 	}

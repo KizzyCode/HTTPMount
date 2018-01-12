@@ -16,7 +16,7 @@ Own libraries:
     - [network_io](https://github.com/KizzyCode/network_io)
     - [http](https://github.com/KizzyCode/http)
 
-Foreign libraries:
+Foreign libraries (for licenses see "src/licenses.txt"):
  - fuse
  - libc
  - time
