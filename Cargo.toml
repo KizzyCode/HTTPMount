@@ -1,0 +1,11 @@
+[package]
+name = "http_mount"
+version = "0.1.0"
+authors = ["Keziah Biermann <development@kizzycode.de>"]
+
+[dependencies]
+http_file = { git = "https://github.com/KizzyCode/http_file.git" }
+
+fuse = "0.3"
+libc = "0.2"
+time = "0.1"

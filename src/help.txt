@@ -1,0 +1,18 @@
+Usage: `%PROGRAM_NAME% args...` where args consists of the following arguments:
+    --uri=<uri_of_file>:
+        The URI of the file to mount (REQUIRED)
+
+    --mountpoint=<path_to_mountpoint>:
+        The path to the mountpoint (REQUIRED)
+
+    --block-size=<block_size_in_kib>:
+        The size of the fetched blocks in KiB; a larger block-size increases latency but also increases transfer-speed (DEFAULT: 1MiB)
+
+    --cache-size=<cache_size_in_kib>:
+        The cache-size; a larger cache-size increases the required amount of memory but also may lower latency and increase transfer-speed (DEFAULT: 256MiB)
+
+    --timeout=<timeout_in_secs>:
+        The time to wait/retry until a filesystem-operation returns `ETIMEDOUT` (DEFAULT: 60s)
+
+    --no-fork:
+        Do not fork into background (DEFAULT: unset)
