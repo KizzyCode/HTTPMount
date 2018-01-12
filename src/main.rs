@@ -94,7 +94,7 @@ impl Default for CLI {
 
 
 fn die(message: &str, code: i32) -> ! {
-	print!("{}", message.trim());
+	print!("{}\n", message.trim());
 	std::process::exit(code);
 }
 
