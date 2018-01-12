@@ -4,11 +4,11 @@
 This application allows you to mount a HTTP-resource like a file.
 
 # Dependencies
-This library relies on a working FUSE-installation.
+This application relies on a working FUSE-installation.
 
 ## Build-Dependencies
-If you want to build the library, you'll also need [libselect](https://github.com/KizzyCode/libselect) which is required
-for network-operations.
+If you want to build the application, you'll also need [libselect](https://github.com/KizzyCode/libselect) which is
+required for network-operations.
 
 ### Cargo-Dependencies
 Own libraries: 
