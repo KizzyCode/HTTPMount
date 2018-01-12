@@ -16,3 +16,9 @@ Usage: `%PROGRAM_NAME% args...` where args consists of the following arguments:
 
     --no-fork:
         Do not fork into background (DEFAULT: unset)
+
+    --licenses:
+        Display license-information
+
+    --help:
+        Display this help
